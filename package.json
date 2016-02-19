@@ -1,0 +1,23 @@
+{
+  "name": "mean",
+  "version": "1.0.0",
+  "description": "practicando mean",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielhuamani/mean.git"
+  },
+  "author": "danielhuamani15@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielhuamani/mean/issues"
+  },
+  "homepage": "https://github.com/danielhuamani/mean#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "swig": "^1.4.2"
+  }
+}
