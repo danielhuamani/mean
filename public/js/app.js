@@ -10,23 +10,36 @@ $(function() {
 });
 
 $(function() {
-  return $('select').select2();
+  if($('select').length>0) {
+
+    return $('select').select2();
+    }
+
 });
 
 $(function() {
-  return $('.toggle-checkbox').bootstrapSwitch({
-    size: "small"
-  });
+  if($('.toggle-checkbox').length>0) {
+
+    return $('.toggle-checkbox').bootstrapSwitch({
+      size: "small"
+    });
+  }
 });
 
 $(function() {
-  return $('.match-height').matchHeight();
+  if($('.match-height').length>0) {
+
+    return $('.match-height').matchHeight();
+  }
 });
 
 $(function() {
-  return $('.datatable').DataTable({
-    "dom": '<"top"fl<"clear">>rt<"bottom"ip<"clear">>'
-  });
+  if($('.datatable').length>0) {
+    return $('.datatable').DataTable({
+      "dom": '<"top"fl<"clear">>rt<"bottom"ip<"clear">>'
+    });
+
+  }
 });
 
 $(function() {
