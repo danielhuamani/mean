@@ -1,17 +1,16 @@
 "use strict";
 
-var usuario = angular.module('usuario', ['ngRoute', 'ngResource'], function ($interpolateProvider) {
+var usuario = angular.module('usuario', ['ui.router'], function ($interpolateProvider) {
 	$interpolateProvider.startSymbol('<%=');
 	$interpolateProvider.endSymbol('%>');
 });
 
 
-usuario.config(function($locationProvider, $routeProvider){
-	$routeProvider
-		.when('/', {
-            templateUrl : 'apps/main/bienvenido.html',
-            controller:   'MainCtrl',
-			controllerAs: 'main'
-        });
-
+usuario.config(function($stateProvider){
+	$stateProvider
+		.state("bienvenido", {
+			url: '/',
+			templateUrl: "apps/main/bienvenido.html",
+			controller: "MainCtrl as main"
+		})
 })
