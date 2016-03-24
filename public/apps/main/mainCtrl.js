@@ -1,9 +1,9 @@
 "use strict";
 angular.module('usuario')
-	.controller('MainCtrl', MainCtrl);
+	.controller('MainCtrl', function(){
 
-	function MainCtrl(){
 		var me = this;
 		me.mensaje = "Hola Daniel";
-	}
+	});
+
 

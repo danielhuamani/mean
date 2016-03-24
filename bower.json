@@ -1,0 +1,26 @@
+{
+  "directory": "bower_components",
+  "name": "mean",
+  "description": "proyecto mean",
+  "main": "index.js",
+  "authors": [
+    "danielhuamani15@gmail.com"
+  ],
+  "shorthand-resolver": "git://github.com//.git",
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.2",
+    "angular-route": "^1.5.2",
+    "angular-resource": "^1.5.2"
+  }
+}
