@@ -1,12 +1,17 @@
 "use strict";
 
 var express = require("express"),
-	router = express.Router();
-
-router.route("/listado")
+	router = express.Router(),
+    User = require("../usuarios/models").User;
+router.route("/")
 	.get(function(req, res){
-		var head = "USUARIOS";
-		res.render("usuarios/usuario_listado.html", {head:head})
+		User.find(function(err, users) {
+            if (err)
+                res.send(err);
+
+            res.json(users);
+        });
+
 	});
 
 module.exports = router;

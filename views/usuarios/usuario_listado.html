@@ -1,73 +1,81 @@
-{% extends "../common/base.html" %}
-{% block css %}
-	<style>
-		.icon-remove{
-			color: #FA2A00;
-			font-size: 22px;
-			margin-right: 10px;
-		}
-		.icon-update{
-			color: #22A7F0;
-			font-size: 22px;
-		}
-	</style>
-{% endblock css %}
-{% block content %}
-<div class="page-title">
-    <span class="title">Usuarios / Listado</span>
-</div>
-<div class="row">
-	<div class="col-xs-12">
-		<div class="card">
-			<table class="table">
-	      <thead>
-	          <tr>
-	              <th>#</th>
-	              <th>Email</th>
-	              <th>DNI</th>
-	              <th>Nombres</th>
-	              <th>Apellidos</th>
-	              <th>Creacion</th>
-	              <th>Acciones</th>
-	          </tr>
-	      </thead>
-	      <tbody>
-	          <tr>
-	              <th scope="row">1</th>
-	              <td>Mark</td>
-	              <td>Otto</td>
-	              <td>@mdo</td>
-	              <td>@mdo</td>
-	              <td>@mdo</td>
-	              <td><span class="glyphicon icon-remove glyphicon-remove-circle"></span>
-								<span class="glyphicon glyphicon-pencil icon-update"></span>
-	              </td>
-	          </tr>
-	          <tr>
-	              <th scope="row">2</th>
-	              <td>Jacob</td>
-	              <td>Thornton</td>
-	              <td>@fat</td>
-	              <td>@mdo</td>
-	              <td>@mdo</td>
-	              <td><span class="glyphicon icon-remove glyphicon-remove-circle"></span>
-								<span class="glyphicon glyphicon-pencil icon-update"></span>
-	              </td>
-	          </tr>
-	          <tr>
-	              <th scope="row">3</th>
-	              <td>Larry</td>
-	              <td>the Bird</td>
-	              <td>@twitter</td>
-	              <td>@mdo</td>
-	              <td>@mdo</td>
-	              <td><span class="glyphicon icon-remove glyphicon-remove-circle"></span>
-								<span class="glyphicon glyphicon-pencil icon-update"></span>
-	              </td>
-	          </tr>
-	      </tbody>
-    	</table>
-    </div>
-	</div>
+
+    <style>
+        .icon-remove{
+            color: #FA2A00;
+            font-size: 22px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .icon-update{
+            color: #22A7F0;
+            font-size: 22px;
+            cursor: pointer;
+        }
+    </style>
+
+
+<div class="contenedor-usuarios-listado"  ng-controller="UsuarioCtrl as vm">
+
+  <div class="page-title">
+      <span class="title">Usuarios / Listado</span>
+  </div>
+  <div class="row">
+      <div class="col-xs-12">
+          <div class="card">
+              <div class="card-body">
+
+                  <button type="button" class="btn btn-success">Crear Usuario</button>
+              </div>
+              <table class="table">
+                  <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Email</th>
+                        <th>DNI</th>
+                        <th>Nombres</th>
+                        <th>Apellidos</th>
+                        <th>Creacion</th>
+                        <th>Acciones</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td><span class="glyphicon icon-remove glyphicon-remove-circle"></span>
+                                      <span class="glyphicon glyphicon-pencil icon-update"></span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td><span class="glyphicon icon-remove glyphicon-remove-circle"></span>
+                                      <span class="glyphicon glyphicon-pencil icon-update"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td><span class="glyphicon icon-remove glyphicon-remove-circle"></span>
+                          <span class="glyphicon glyphicon-pencil icon-update"></span>
+                        </td>
+                    </tr>
+            </tbody>
+          </table>
+      </div>
+      </div>
+  </div>
 </div>
 {% endblock content %}

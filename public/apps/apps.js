@@ -1,3 +1,16 @@
 "use strict";
 
-var login_registrar = angular.module('login-registrar', []);
+var usuario = angular.module('usuario', ['ngRoute'], function ($interpolateProvider) {
+	$interpolateProvider.startSymbol('<%=');
+	$interpolateProvider.endSymbol('%>');
+});
+
+
+usuario.config(function($locationProvider, $routeProvider){
+	$routeProvider
+		.when('/', {
+            templateUrl : 'apps/main/bienvenido.html',
+            controller  : 'MainCtrl as main'
+        });
+
+})

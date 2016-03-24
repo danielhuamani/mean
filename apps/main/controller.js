@@ -5,14 +5,15 @@ var express = require("express"),
     User = require("../usuarios/models").User;
 
 
-router.route("/")
+router.route("/ingresar")
     .get(function(req, res){
         res.render("main/login.html")
     });
-router.route("/bienvenido")
+router.route("/")
     .get(function(req, res){
+
         var head = "BIENVENIDO";
-        res.render("main/bienvenido.html", {head:head})
+        res.render("common/base.html", {head:head})
     });
 router.route("/registrar")
     .get(function(req, res){
@@ -20,13 +21,11 @@ router.route("/registrar")
         res.render("main/registrar.html", {head:head})
     })
     .post(function(req, res){
-        console.log(req.body)
         var user = new User({
             'email': req.body.email,
             'password': req.body.password
         });
         user.save(function(err){
-
             res.redirect("/")
         });
 

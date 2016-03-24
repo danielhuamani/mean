@@ -17,13 +17,13 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/themes/flat-blue.css">
     <style>
-    .input-mod{
+  /*  .input-mod{
         background-color: #353d47 !important;
-    }
+    }*/
     </style>
 </head>
 
-<body class="flat-blue login-page" ng-app="login-registrar">
+<body class="flat-blue login-page">
     <div class="container">
         <div class="login-box">
             <div>
@@ -39,9 +39,9 @@
                                     Log In...
                                 </div>
                             </div>
-                            <form autocomplete="off">
+                            <form autocomplete="off" method="POST" action="/">
                                 <div class="control">
-                                    <input type="text" class="form-control input-mod"  placeholder="Email" name="email" />
+                                    <input type="text" class="form-control input-mod"  placeholder="Email" name="username" />
                                 </div>
                                 <div class="control">
                                     <input type="password" class="form-control input-mod" placeholder="Password" name="password" />
@@ -60,8 +60,7 @@
         </div>
     </div>
     <!-- Javascript Libs -->
-    <script type="text/javascript" src="/js/angular.js"></script>
-    <script type="text/javascript" src="/apps/apps.js"></script>
+
     <!-- Javascript -->
 
 </body>
