@@ -9,7 +9,7 @@ var usuario = angular.module('usuario', ['ui.router'], function ($interpolatePro
 usuario.config(function($stateProvider){
 	$stateProvider
 		.state("bienvenido", {
-			url: '/',
+			url: '',
 			templateUrl: "apps/main/bienvenido.html",
 			controller: "MainCtrl as main"
 		})
