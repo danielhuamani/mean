@@ -1,0 +1,54 @@
+
+    <style>
+        .icon-remove{
+            color: #FA2A00;
+            font-size: 22px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .icon-update{
+            color: #22A7F0;
+            font-size: 22px;
+            cursor: pointer;
+        }
+    </style>
+
+
+<div class="contenedor-usuarios-listado"  ng-controller="UsuarioCtrl as vm">
+
+  <div class="page-title">
+      <span class="title">Usuarios / Listado</span>
+  </div>
+  <div class="row">
+      <div class="col-xs-12">
+          <div class="card">
+              <div class="card-body">
+
+                  <button type="button" class="btn btn-success">Crear Usuario</button>
+              </div>
+              <table class="table">
+                  <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>ID</th>
+                        <th>Email</th>
+                        <th>Creacion</th>
+                        <th>Acciones</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr ng-repeat="usuario in vm.usuarios">
+                        <th scope="row">1</th>
+                        <td><%=usuario._id%></td>
+                        <td><%=usuario.email%></td>
+                        <td><%=usuario.creacion%></td>
+                        <td><span class="glyphicon icon-remove glyphicon-remove-circle"></span>
+                            <span class="glyphicon glyphicon-pencil icon-update"></span>
+                        </td>
+                      </tr>
+            </tbody>
+          </table>
+      </div>
+      </div>
+  </div>
+</div>

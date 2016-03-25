@@ -21,11 +21,14 @@ router.route("/registrar")
         res.render("main/registrar.html", {head:head})
     })
     .post(function(req, res){
+        console.log(req.body.email);
+        console.log(req.body.password);
         var user = new User({
             'email': req.body.email,
             'password': req.body.password
         });
         user.save(function(err){
+            console.log(err);
             res.redirect("/")
         });
 

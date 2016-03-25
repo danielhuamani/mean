@@ -6,11 +6,17 @@ var usuario = angular.module('usuario', ['ui.router'], function ($interpolatePro
 });
 
 
-usuario.config(function($stateProvider){
+usuario.config(function($stateProvider, $urlRouterProvider){
+	$urlRouterProvider.otherwise("/");
 	$stateProvider
 		.state("bienvenido", {
-			url: '',
+			url: '/',
 			templateUrl: "apps/main/bienvenido.html",
 			controller: "MainCtrl as main"
+		})
+		.state("usuarios", {
+			url: '/usuarios',
+			templateUrl: "apps/usuario/usuarios_listado.html",
+			controller: "UsuarioCtrl as user"
 		})
 })
