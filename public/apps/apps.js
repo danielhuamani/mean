@@ -19,4 +19,9 @@ usuario.config(function($stateProvider, $urlRouterProvider){
 			templateUrl: "apps/usuario/usuarios_listado.html",
 			controller: "UsuarioCtrl as user"
 		})
+		.state("usuarioscrear", {
+			url: '/usuarios-crear',
+			templateUrl: "apps/usuario/usuarios_crear.html",
+			controller: "UsuarioCtrl as usercrear"
+		})
 })

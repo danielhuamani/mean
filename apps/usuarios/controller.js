@@ -12,6 +12,19 @@ router.route("/")
             res.json(users);
         });
 
+	})
+	.post(function(req, res, next){
+		console.log("---------------")
+        console.log("test")
+        console.log(req.body)
+
+        var user = new User(req.body);
+        user.save(function(err, user){
+            if(err){
+                return next(err)
+            }
+            res.json(user)
+        });
 	});
 
 module.exports = router;

@@ -3,12 +3,16 @@
 var express = require('express'),
     server = express(),
     bodyParser = require('body-parser'),
+    cors = require('cors'),
+    methodOverride = require('method-override'),
     cookieParser = require('cookie-parser'),
     session = require('express-session'),
     swig = require('swig'),
     port = process.env.PORT || 8000;
 
+
 // configuracion de SWIG -> template
+server.use(cors())
 server.engine('html', swig.renderFile);
 server.set('view engine', 'html');
 server.set('views', __dirname + '/views');
@@ -16,6 +20,7 @@ swig.setDefaults({cache: false});
 
 //Confiugracion de bodyParser para el mthod POST
 server.use(bodyParser.urlencoded({ extended: false }))
+server.use(bodyParser.json())
 server.use(cookieParser());
 server.use(session({
 	secret: 'keyboard cat',
